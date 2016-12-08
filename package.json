@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-   "scripts": {
+  "scripts": {
     "test": "ava",
     "lint": "standard",
     "dev": "chokidar '**/*.js' -c 'standard && ava'",
@@ -17,5 +17,9 @@
     "chokidar-cli": "^1.2.0",
     "precommit-hook": "^3.0.0",
     "standard": "^8.6.0"
-  }
+  },
+  "pre-commit": [
+    "validate",
+    "test"
+  ]
 }
